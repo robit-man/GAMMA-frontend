@@ -30,7 +30,7 @@
     </div>
     <div class="data-wrapper" style="">
       <div class="data-title" style="">ACCESS THE CONTRACT </div>
-      <div class="data-cylinders"  style="">
+      <div class="data-cylinders  mb-8"  style="">
       <a class="cylinder-module" target="_blank" href="https://www.dextools.io/app/uniswap/pair-explorer/0xe46456153cf0e767528f4a4cd3b613d5c4101e48">
           <img width="64px" height="64px" src="~/@/assets/dextools.png" alt="">
           </a>
