@@ -1,6 +1,7 @@
 @import '~@vue/ui/dist/vue-ui.css';
 @import '~primer-support/index.scss';
-@import './assets/fonts/iconfont.css';@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap');
+@import './assets/fonts/iconfont.css';
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 $primary: #fff;
 $secondary: #000;
 $trinary: #000;
@@ -79,8 +80,8 @@ body{top:0px;left:0px;width:100%;overflow:auto;position:absolute;}
   margin:2rem 0rem 0.5rem 0rem;
   font-size:5rem;
   line-height:3rem;}
-.data-title{ padding:1rem 0rem;}
-.data-wrapper{width:512px;margin:auto;min-width:256px;}
+  .data-title{ padding:1rem 0rem;  font-family: 'Space Mono', monospace!important;
+    letter-spacing:1px;}.data-wrapper{width:512px;margin:auto;min-width:256px;}
 
 .copy-icon{
   position:absolute;
@@ -610,7 +611,7 @@ input.input:read-only {
     justify-content:center;}
  
   .logo-title{
-    width:auto;}
+    width:100%;}
   .data-title{ padding:1rem 0rem;}
   .copy-icon{
     position:absolute;
