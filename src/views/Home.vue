@@ -5,7 +5,7 @@
 <div class="about-wrapper">
   <div class="about-text">
        <router-link :to="{ name: 'about' }" >
-      <h1 style="color:white;">GAMMA PROTOCOL <img src="~/@/assets/paper.png" style="filter:invert(1);" alt="">
+      <h1 style="color:white;">GAMMA PROTOCOL <img src="~/@/assets/paper.png" style="height:24px;filter:invert(1);" alt="">
       </h1>
     </router-link>
     </div>
