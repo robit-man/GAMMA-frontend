@@ -101,6 +101,7 @@ body{top:0px;left:0px;width:100%;background-image:url("./assets/noise.gif");
   height:232px;z-index:2;
   position:relative;
   filter:invert(1);margin:auto -64px ;
+  background-image:url("./assets/triangle.svg");
 background-size:contain;
 background-position: center;
 background-repeat:no-repeat;margin-bottom: -31px;
@@ -125,10 +126,10 @@ img{height:64px!important;margin:auto;margin-bottom:46px;}}
   bottom: -32px;
   background-color: white;
   }
-
+.about-wrap{width:512px;max-width:calc(100vw - 2rem);margin:auto;}
   .about-text{
-    margin:auto;text-align: center;padding:3rem;
-    h1{img{height:24px;}font-size:32px;transition:letter-spacing 100ms ease;
+    margin:auto;text-align: center;
+    h1{font-size:32px;transition:letter-spacing 100ms ease;
       &:hover{letter-spacing:2px;}}
       
   }
@@ -638,6 +639,7 @@ input.input:read-only {
     height:232px;z-index:2;
     position:relative;
     filter:invert(1);margin:auto -64px ;
+    background-image:url("./assets/triangle.svg");
   background-size:contain;
   background-position: center;
   background-repeat:no-repeat;margin-bottom: -31px;
