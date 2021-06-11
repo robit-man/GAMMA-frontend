@@ -29,37 +29,37 @@ $border: 1px solid $bg-color;
 
 html, body, #app {
   color: white;
-  background:black;
   letter-spacing:5px;
   font-family: Helios;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-shadow:0px 0px 0.5px;
+  text-shadow:0px 0px 0.5px;overflow:hidden!important;
 
 }
-body{top:0px;left:0px;width:100%;overflow:auto;position:absolute;}
+body{top:0px;left:0px;width:100%;background-image:url("./assets/noise.gif");
+  position:absolute;}
 .logo-center-wrapper{
-  margin:auto;
   margin-bottom:0.5rem;
   display:flex;
-  flex-flow:column;
+  flex-flow:row;
   justify-content:center;}
-  .copy-button{    
-    position: absolute;
-    z-index: 10;
-    right: 16px;
-    top: 8px;
-    padding-right: 64px;
-    line-height: 64px;
+  .copy-button{   
     img{transition:filter 0.2s linear;}
-    &:hover{img{filter:invert(1);}}
-    span{opacity:0;transition:opacity 0.2s linear;}
+    span{opacity:0;transition:opacity 0.2s linear;
+      margin:auto;padding-top:1rem;display:block;
+      width:100%;text-align:center;}
     &:hover{span{opacity:1;
     }}
   }
+  .greek-icons{filter:invert(1);}
+  .img-top{opacity:1;position: absolute;z-index:1;transition:opacity 500ms ease;&:hover{animation:flash 200ms linear 1;}}
+  .img-bottom{position: absolute;top:0px;left:0px;}
+  .middle-1{transform:translatex(-40px);margin-bottom:0.125rem;}
+  .middle-2{transform:translatex(-40px);margin-top:0.125rem;}
+  .middle-3{transform:translatex(40px);margin-bottom:0.125rem;}
+  .middle-4{transform:translatex(40px);margin-top:0.125rem;}
   .sale-button{    
     position: absolute;
-    z-index: 10;
     right: 16px;
     top: 64px;
     padding-right: 64px;
@@ -72,44 +72,49 @@ body{top:0px;left:0px;width:100%;overflow:auto;position:absolute;}
   }
 .logo-title{
   filter:invert(1);
-  background-color:black;
-  border-radius:10%;
+  background-image:linear-gradient(45deg, transparent 0%, transparent 0.5rem, black 0.5rem, black calc(100% - 1.5rem), transparent calc(100% - 1.5rem));
   width:512px;
   height:5rem;
   padding:1rem;
   margin:2rem 0rem 0.5rem 0rem;
   font-size:5rem;
   line-height:3rem;}
-  .data-title{ padding:1rem 0rem;  font-family: 'Space Mono', monospace!important;
-    letter-spacing:1px;}.data-wrapper{width:512px;margin:auto;min-width:256px;}
 
-.copy-icon{
+  .data-title{ padding:1rem 0rem;  font-family: 'Space Mono', monospace!important;
+    letter-spacing:1px;}.data-wrapper{width:512px;margin:auto;min-width:256px;}.data-wrapper{width:512px;margin:auto;min-width:256px;}
+.full-wrapper{display:flex;flex-flow:column;justify-content: center;height:100vh;
+  background-image:radial-gradient(#333e, #000e); }
+.copy-icon{clip-path: circle(50% at 50% 50%);
   position:absolute;
   top:0px;
   right:0px;}
-.data-cylinders{
-  width:512px;padding:2rem;
+  .siblings{display:flex;flex-flow:column;justify-content: space-between;}
+  .sibling-icon{clip-path: circle(50% at 50% 50%);transition:height 100ms, margin 100ms ease;height:64px;margin:32px;&:hover{height:128px;margin:0px;}}
+.data-triangles{
+  width:512px;padding:1rem;
   margin-top:-0.7rem;display:flex;flex-flow:wrap;justify-content:center;}
-.cylinder-module{
-  clip-path: cylinder(50% at 50% 50%);
+.triangle-module{
   overflow:visible;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   display:flex;flex-flow:wrap;justify-content:center;
-  width:230px;
-  height:230px;z-index:1;
-  position:relative;mix-blend-mode: difference;
-  filter:invert(1);margin:auto -4px ;
-  margin-bottom:-68px;
-  background-image:url("./assets/cylinder.svg");
+  width:256px;
+  height:232px;z-index:2;
+  position:relative;
+  filter:invert(1);margin:auto -64px ;
 background-size:contain;
 background-position: center;
-background-repeat:no-repeat;
+background-repeat:no-repeat;margin-bottom: -31px;
 &:hover{z-index:3;animation:flash 0.2s linear 1;filter:invert(0);}
-&:nth-child(odd){
-  img{}}
-  
-img{height:64px!important;margin:auto;}}
+&:nth-child(odd){z-index:1;transform:rotate(180deg);  
+  img{transform:rotate(180deg);}}
+  &:nth-child(4){margin-top: 24px;transform:rotate(180deg);  
+    img{transform:rotate(180deg);}}
+img{height:64px!important;margin:auto;margin-bottom:46px;}}
 .toast{  font-family: Helios;
-  background-color:transparent!important;position:fixed;left:0px;top:0px;line-height:24px;padding-left:32px;margin:unset;text-transform:uppercase;}
+  background-color:transparent!important;
+  position:fixed;left:0px;top:0px;
+  line-height:24px;padding-left:32px;
+  margin:unset;text-transform:uppercase;}
 .background2{
   overflow:hidden;
   height: calc(100vh + 52px);
@@ -120,8 +125,16 @@ img{height:64px!important;margin:auto;}}
   bottom: -32px;
   background-color: white;
   }
-  .para-desktop{display:flex;}
-    .para-mobile{display:none;}
+
+  .about-text{
+    margin:auto;text-align: center;padding:3rem;
+    h1{img{height:24px;}font-size:32px;transition:letter-spacing 100ms ease;
+      &:hover{letter-spacing:2px;}}
+      
+  }
+
+  .para-desktop{display:block!important;}
+    .para-mobile{display:none!important;}
 
   @keyframes flash {
     0%{filter:invert(0);}
@@ -137,9 +150,8 @@ img{height:64px!important;margin:auto;}}
     100%{filter:invert(0);}
     
   }
-
 .front{transition:transform 0.2s ease;overflow:hidden!important;}
-.parallax-card{transition:transform 0.2s linear;}
+.parallax-card{transition:transform 0.2s linear;&::before{box-shadow:unset!important;}}
 #app {
   z-index:1;
   position:relative;
@@ -396,7 +408,7 @@ nav{
 
   }
 }
-.cylinder-button{text-align:center;}
+.circle-button{text-align:center;}
 
 .form {
   margin:auto 1.7rem;
@@ -617,31 +629,37 @@ input.input:read-only {
     position:absolute;
     top:0px;
     right:0px;}
-  .data-cylinders{
-    width:auto;padding:1rem;margin-bottom: 128px;
+  .data-triangles{
+    width:auto;padding:1rem;
     margin-top:-0.7rem;display:flex;flex-flow:wrap;justify-content:center;}
-  .cylinder-module{
-    margin:auto -32px;
+  .triangle-module{
     display:flex;flex-flow:wrap;justify-content:center;
-    width:200px;
-    height:256px;
+    width:256px;
+    height:232px;z-index:2;
     position:relative;
-    filter:invert(1);mix-blend-mode:difference;
-    background-image:url("./assets/cylinder.svg");
+    filter:invert(1);margin:auto -64px ;
   background-size:contain;
   background-position: center;
-  background-repeat:no-repeat;
+  background-repeat:no-repeat;margin-bottom: -31px;
   &:hover{z-index:3;animation:flash 0.2s linear 1;filter:invert(0);}
-    
-    &:nth-child(4){  margin-top:128px!important;margin-bottom:-128px!important; 
-      img{}}
-  
-    &:nth-child(2){margin-bottom:-128px; opacity:1;z-index:2;  
-      img{}}
-  img{height:64px!important;margin:auto;}
-}
+  &:nth-child(odd){z-index:1;transform:rotate(180deg);  
+    img{transform:rotate(180deg);}}&:nth-child(3){transform:rotate(0deg);  
+      img{transform:rotate(0deg);}}
+  img{height:64px!important;margin:auto;margin-bottom:46px;}}  
 
-.para-desktop{display:none;}
-.para-mobile{display:flex;}
- 
+  .siblings{display:flex;flex-flow:row;justify-content: center;}
+  .sibling-icon{clip-path: circle(50% at 50% 50%);transition:height 100ms, margin 100ms ease;height:64px;margin:unset;&:hover{height:128px;margin:0px;}}
+  .vuejs-countdown .digit{font-size:20px!important;}
+  .middle-1{transform:translatex(0px);margin-bottom:0rem;}
+  .middle-2{transform:translatex(0px);margin-top:0rem;}
+  .middle-3{transform:translatex(0px);margin-bottom:0rem;}
+  .middle-4{transform:translatex(0px);margin-top:0rem;}
+.para-desktop{display:none!important;}
+.para-mobile{display:block!important;}
+.about-text{
+  margin:auto;text-align: center;padding:1rem 0rem;
+  h1{font-size:20px;transition:letter-spacing 100ms ease;
+    &:hover{letter-spacing:2px;}}
+    
+}
 }
