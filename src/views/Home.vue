@@ -69,9 +69,8 @@
 
 </div>  
 <div class="about-text">
-    <Countdown deadline="June 1, 2022"></Countdown>
-          <h1>
-      </h1>
+   <Countdown deadline="October 1, 2022"></Countdown>
+    <h1>GEOMETRIC-1 LAUNCH</h1>
     </div>
 
 
