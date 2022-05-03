@@ -12,7 +12,7 @@
  <h1>GAMMA tokens correspond to the luminance value of LED pixels.</h1>
 <br><p>
 
-Present on the exposed surfaces and livestreamed from a satellite to be placed in LEO in JUNE 2022, These pixel's hue (KAPPA), luminosity (GAMMA), X-Axis (BETA) and Y-Axis (RHO) locations are acquired in exchange for the aforementioned tokens.</p>    <br>    <router-link :to="{ name: 'home' }" >
+Present on the exposed surfaces and livestreamed from a satellite to be placed in LEO in OCTOBER 2022, These pixel's hue (KAPPA), luminosity (GAMMA), X-Axis (BETA) and Y-Axis (RHO) locations are acquired in exchange for the aforementioned tokens.</p>    <br>    <router-link :to="{ name: 'home' }" >
      <img src="~/@/assets/gamma-26.png" style="height:64px;filter:invert(1);" alt="">
     </router-link></div>
 
